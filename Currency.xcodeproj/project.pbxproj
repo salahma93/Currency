@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		AB07F6C12A2A22C200A3F02D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB07F6C02A2A22C200A3F02D /* AppDelegate.swift */; };
-		AB07F6C52A2A22C200A3F02D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB07F6C42A2A22C200A3F02D /* ViewController.swift */; };
 		AB07F6C82A2A22C200A3F02D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB07F6C62A2A22C200A3F02D /* Main.storyboard */; };
 		AB07F6CB2A2A22C200A3F02D /* Currency.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AB07F6C92A2A22C200A3F02D /* Currency.xcdatamodeld */; };
 		AB07F6CD2A2A22C300A3F02D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB07F6CC2A2A22C300A3F02D /* Assets.xcassets */; };
@@ -29,7 +28,6 @@
 /* Begin PBXFileReference section */
 		AB07F6BD2A2A22C200A3F02D /* Currency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Currency.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB07F6C02A2A22C200A3F02D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AB07F6C42A2A22C200A3F02D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AB07F6C72A2A22C200A3F02D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AB07F6CA2A2A22C200A3F02D /* Currency.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Currency.xcdatamodel; sourceTree = "<group>"; };
 		AB07F6CC2A2A22C300A3F02D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -79,12 +77,11 @@
 			isa = PBXGroup;
 			children = (
 				AB07F6C02A2A22C200A3F02D /* AppDelegate.swift */,
-				AB07F6C42A2A22C200A3F02D /* ViewController.swift */,
-				AB07F6C62A2A22C200A3F02D /* Main.storyboard */,
-				AB07F6CC2A2A22C300A3F02D /* Assets.xcassets */,
-				AB07F6CE2A2A22C300A3F02D /* LaunchScreen.storyboard */,
 				AB07F6D12A2A22C300A3F02D /* Info.plist */,
+				AB07F6CC2A2A22C300A3F02D /* Assets.xcassets */,
 				AB07F6C92A2A22C200A3F02D /* Currency.xcdatamodeld */,
+				AB07F6C62A2A22C200A3F02D /* Main.storyboard */,
+				AB07F6CE2A2A22C300A3F02D /* LaunchScreen.storyboard */,
 			);
 			path = Currency;
 			sourceTree = "<group>";
@@ -199,7 +196,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB07F6CB2A2A22C200A3F02D /* Currency.xcdatamodeld in Sources */,
-				AB07F6C52A2A22C200A3F02D /* ViewController.swift in Sources */,
 				AB07F6C12A2A22C200A3F02D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
