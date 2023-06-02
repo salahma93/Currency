@@ -14,6 +14,7 @@
 		AB07F6DB2A2A22C400A3F02D /* CurrencyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB07F6DA2A2A22C400A3F02D /* CurrencyTests.swift */; };
 		AB07F6F62A2A277800A3F02D /* NetworkManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB07F6F52A2A277800A3F02D /* NetworkManagerProtocol.swift */; };
 		AB07F6F82A2A279300A3F02D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB07F6F72A2A279300A3F02D /* NetworkManager.swift */; };
+		AB07F6FB2A2A2A3200A3F02D /* NetworkServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB07F6FA2A2A2A3200A3F02D /* NetworkServiceProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +38,7 @@
 		AB07F6DA2A2A22C400A3F02D /* CurrencyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTests.swift; sourceTree = "<group>"; };
 		AB07F6F52A2A277800A3F02D /* NetworkManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerProtocol.swift; sourceTree = "<group>"; };
 		AB07F6F72A2A279300A3F02D /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		AB07F6FA2A2A2A3200A3F02D /* NetworkServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +103,17 @@
 			children = (
 				AB07F6F52A2A277800A3F02D /* NetworkManagerProtocol.swift */,
 				AB07F6F72A2A279300A3F02D /* NetworkManager.swift */,
+				AB07F6F92A2A2A2400A3F02D /* Service */,
 			);
 			path = "Network Layer";
+			sourceTree = "<group>";
+		};
+		AB07F6F92A2A2A2400A3F02D /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				AB07F6FA2A2A2A3200A3F02D /* NetworkServiceProtocol.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,6 +220,7 @@
 				AB07F6CB2A2A22C200A3F02D /* Currency.xcdatamodeld in Sources */,
 				AB07F6F62A2A277800A3F02D /* NetworkManagerProtocol.swift in Sources */,
 				AB07F6C12A2A22C200A3F02D /* AppDelegate.swift in Sources */,
+				AB07F6FB2A2A2A3200A3F02D /* NetworkServiceProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
