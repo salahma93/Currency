@@ -12,6 +12,8 @@
 		AB07F6CD2A2A22C300A3F02D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB07F6CC2A2A22C300A3F02D /* Assets.xcassets */; };
 		AB07F6D02A2A22C300A3F02D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB07F6CE2A2A22C300A3F02D /* LaunchScreen.storyboard */; };
 		AB07F6DB2A2A22C400A3F02D /* CurrencyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB07F6DA2A2A22C400A3F02D /* CurrencyTests.swift */; };
+		AB07F6F62A2A277800A3F02D /* NetworkManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB07F6F52A2A277800A3F02D /* NetworkManagerProtocol.swift */; };
+		AB07F6F82A2A279300A3F02D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB07F6F72A2A279300A3F02D /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +35,8 @@
 		AB07F6D12A2A22C300A3F02D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB07F6D62A2A22C400A3F02D /* CurrencyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CurrencyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB07F6DA2A2A22C400A3F02D /* CurrencyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTests.swift; sourceTree = "<group>"; };
+		AB07F6F52A2A277800A3F02D /* NetworkManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerProtocol.swift; sourceTree = "<group>"; };
+		AB07F6F72A2A279300A3F02D /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,7 @@
 				AB07F6D12A2A22C300A3F02D /* Info.plist */,
 				AB07F6CC2A2A22C300A3F02D /* Assets.xcassets */,
 				AB07F6C92A2A22C200A3F02D /* Currency.xcdatamodeld */,
+				AB07F6F42A2A274E00A3F02D /* Network Layer */,
 				AB07F6CE2A2A22C300A3F02D /* LaunchScreen.storyboard */,
 			);
 			path = Currency;
@@ -89,6 +94,15 @@
 				AB07F6DA2A2A22C400A3F02D /* CurrencyTests.swift */,
 			);
 			path = CurrencyTests;
+			sourceTree = "<group>";
+		};
+		AB07F6F42A2A274E00A3F02D /* Network Layer */ = {
+			isa = PBXGroup;
+			children = (
+				AB07F6F52A2A277800A3F02D /* NetworkManagerProtocol.swift */,
+				AB07F6F72A2A279300A3F02D /* NetworkManager.swift */,
+			);
+			path = "Network Layer";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,7 +205,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB07F6F82A2A279300A3F02D /* NetworkManager.swift in Sources */,
 				AB07F6CB2A2A22C200A3F02D /* Currency.xcdatamodeld in Sources */,
+				AB07F6F62A2A277800A3F02D /* NetworkManagerProtocol.swift in Sources */,
 				AB07F6C12A2A22C200A3F02D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
