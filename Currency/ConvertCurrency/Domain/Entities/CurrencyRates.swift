@@ -17,10 +17,22 @@ struct CurrencyRatesResponse: Codable {
 
 struct CurrencyRates {
 	let base: String
-	let rates: [String: Double]
+	private let rates: [String: Double]
 	
 	init(from response: CurrencyRatesResponse) {
 		self.base = response.base
 		self.rates = response.rates
 	}
+	
+	func rate(for symbol: String) throws -> Double {
+		if let rate = rates[symbol] {
+			return rate
+		} else {
+			throw CurrencyRateError.notAvailable
+		}
+	}
+}
+
+enum CurrencyRateError: Error {
+	case notAvailable
 }
