@@ -8,6 +8,6 @@
 import Foundation
 
 protocol ConvertCurrencyUseCaseProtocol {
-	func convertCurrency(from: String, to: String, amount: Double,
+	func convertCurrency(with model: CurrencyConversionModel,
 						 completion: @escaping (Result<Double, Error>) -> Void)
 }

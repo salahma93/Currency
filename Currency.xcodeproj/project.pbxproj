@@ -34,6 +34,7 @@
 		AB07F7382A2B897900A3F02D /* CurrencyRates.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB07F7372A2B897900A3F02D /* CurrencyRates.swift */; };
 		AB07F73F2A2B8F9D00A3F02D /* MockedNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB07F73E2A2B8F9D00A3F02D /* MockedNetworkManager.swift */; };
 		AB07F7412A2B935900A3F02D /* response.json in Resources */ = {isa = PBXBuildFile; fileRef = AB07F7402A2B925200A3F02D /* response.json */; };
+		AB07F7452A2BCF7400A3F02D /* CurrencyConversionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB07F7442A2BCF7400A3F02D /* CurrencyConversionModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		AB07F7372A2B897900A3F02D /* CurrencyRates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyRates.swift; sourceTree = "<group>"; };
 		AB07F73E2A2B8F9D00A3F02D /* MockedNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedNetworkManager.swift; sourceTree = "<group>"; };
 		AB07F7402A2B925200A3F02D /* response.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = response.json; sourceTree = "<group>"; };
+		AB07F7442A2BCF7400A3F02D /* CurrencyConversionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConversionModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				AB07F7372A2B897900A3F02D /* CurrencyRates.swift */,
+				AB07F7442A2BCF7400A3F02D /* CurrencyConversionModel.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -413,6 +416,7 @@
 				AB07F6FB2A2A2A3200A3F02D /* NetworkServiceProtocol.swift in Sources */,
 				AB07F72F2A2B7A0C00A3F02D /* URLManager.swift in Sources */,
 				AB07F7122A2A372800A3F02D /* ConvertCurrencyUseCaseProtocol.swift in Sources */,
+				AB07F7452A2BCF7400A3F02D /* CurrencyConversionModel.swift in Sources */,
 				AB07F71C2A2A3B9700A3F02D /* CurrencyRatesRepository.swift in Sources */,
 				AB07F7042A2A2BE400A3F02D /* ConvertCurrencyViewController.swift in Sources */,
 				AB07F7312A2B7A3100A3F02D /* URLManaging.swift in Sources */,
