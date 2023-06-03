@@ -8,5 +8,5 @@
 import Foundation
 
 protocol AvailableCurrenciesUseCaseProtocol {
-	func getAll()
+	func getCurrencySymbols(completion: @escaping (Result<[String], Error>) -> Void)
 }
