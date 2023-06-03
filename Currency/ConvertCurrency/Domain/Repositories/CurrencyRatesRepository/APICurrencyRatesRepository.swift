@@ -40,10 +40,15 @@ class APICurrencyRatesRepository: CurrencyRatesRepository, URLManaging {
 	
 	//MARK: - util private methods
 	private func buildParametersDictionary(with symbols: [String]) -> [String: String?] {
-		[
+		var paramsDictionary: [String: String?] = [
 			"access_key": "7f008d37e57dbbd48bbeeda572d85c1f",
-			"symbols": symbols.joined(separator: ","),
 			"format": "1"
 		]
+		
+		if symbols.count > 0 {
+			paramsDictionary["symbols"] = symbols.joined(separator: ",")
+		}
+		
+		return paramsDictionary
 	}
 }
