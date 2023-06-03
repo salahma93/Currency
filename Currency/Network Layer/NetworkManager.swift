@@ -35,11 +35,10 @@ class NetworkManager: NetworkManagerProtocol {
 	}
 	
 	//MARK: - private methods
-	private func handleResponse<T: Codable>(json: Any, completion: @escaping (Result<T, Error>) -> Void) {
+	private func handleResponse<T: Codable>(json: Data, completion: @escaping (Result<T, Error>) -> Void) {
 		do {
-			let jsonData = try JSONSerialization.data(withJSONObject: json, options: [])
 			let decoder = JSONDecoder()
-			let object = try decoder.decode(T.self, from: jsonData)
+			let object = try decoder.decode(T.self, from: json)
 			
 			completion(.success(object))
 		} catch {
