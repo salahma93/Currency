@@ -15,10 +15,12 @@ struct CurrencyRatesResponse: Codable {
 	let rates: [String: Double]
 }
 
+//MARK: - CurrencyRates
 struct CurrencyRates {
 	let base: String
 	private let rates: [String: Double]
 	
+	//MARK: - init(s)
 	init(from response: CurrencyRatesResponse) {
 		self.base = response.base
 		self.rates = response.rates
@@ -29,6 +31,11 @@ struct CurrencyRates {
 		self.rates = rates
 	}
 	
+	//MARK: - calculated properties
+	lazy var symbols: [String] = {
+		Array(rates.keys)
+	}()
+	
 	func rate(for symbol: String) throws -> Double {
 		if let rate = rates[symbol] {
 			return rate
@@ -38,6 +45,7 @@ struct CurrencyRates {
 	}
 }
 
+//MARK: - Error Enum
 enum CurrencyRateError: Error {
 	case notAvailable
 }
