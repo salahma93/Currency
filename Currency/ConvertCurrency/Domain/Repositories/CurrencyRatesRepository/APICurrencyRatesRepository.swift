@@ -21,9 +21,6 @@ class APICurrencyRatesRepository: CurrencyRatesRepository, URLManaging {
 	
 	//MARK: - CurrencyRatesRepository
 	func getLatestRates(for symbols: [String], completion: @escaping RatesCompletion) {
-		// Make API call to retrieve the conversion rate
-		// Parse the response and calculate the converted amount
-		// Invoke the completion handler with the result or error
 		guard let url = getURL(for: serviceURLKey) else {
 			return
 		}
@@ -31,9 +28,14 @@ class APICurrencyRatesRepository: CurrencyRatesRepository, URLManaging {
 		let params = buildParametersDictionary(with: symbols)
 		let request = requestMethod.configure(request: URLRequest(url: url), with: params)
 		networkManager.load(request: request) { (result: Result<CurrencyRatesResponse, Error>) in
-			print(result)
+			switch result {
+			case .success(let response):
+				completion(.success(CurrencyRates(from: response)))
+						   
+			case .failure(let error):
+				completion(.failure(error))
+			}
 		}
-		
 	}
 	
 	//MARK: - util private methods
