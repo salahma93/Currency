@@ -37,11 +37,11 @@ class CurrencyConversionUseCase: ConvertCurrencyUseCaseProtocol {
 	//MARK: - Private Methods
 	private func convert(_ model: CurrencyConversionModel, with rates: CurrencyRates) throws -> Double {
 		guard rates.base != model.to else {
-			return try model.amount / rates.rate(for: model.to)
+			return try model.amount / rates.rate(for: model.from)
 		}
 		
 		guard rates.base != model.from else {
-			return try model.amount * rates.rate(for: model.from)
+			return try model.amount * rates.rate(for: model.to)
 		}
 		
 		let amountToBaseCurrency = try model.amount / rates.rate(for: model.from)
