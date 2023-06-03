@@ -8,19 +8,19 @@
 import Foundation
 
 class CurrencyConversionUseCase {
-	private let currencyRepository: CurrencyConversionRepository
+	private let currencyRepository: CurrencyRatesRepository
 	
-	init(currencyRepository: CurrencyConversionRepository) {
+	init(currencyRepository: CurrencyRatesRepository) {
 		self.currencyRepository = currencyRepository
 	}
 	
 	func convertCurrency(from: String, to: String, amount: Double,
 						 completion: @escaping (Result<Double, Error>) -> Void) {
 		
-		currencyRepository.convertCurrency(from: from, to: to, amount: amount) { result in
+		currencyRepository.getLatestRates(for: []) { result in
 			switch result {
 			case .success(let convertedAmount):
-				completion(.success(convertedAmount))
+				completion(.success(0.0))
 			case .failure(let error):
 				completion(.failure(error))
 			}
