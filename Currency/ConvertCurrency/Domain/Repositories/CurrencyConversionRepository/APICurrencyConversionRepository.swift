@@ -8,6 +8,7 @@
 import Foundation
 
 class APICurrencyConversionRepository: CurrencyConversionRepository, NetworkServiceProtocol {
+	var serviceURLKey: String = "currency-convert"
 	let networkManager: NetworkManagerProtocol
 	
 	//MARK: - init

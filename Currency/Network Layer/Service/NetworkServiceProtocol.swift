@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol NetworkServiceProtocol {
+protocol NetworkServiceProtocol: URLManaging {
 	func start<ParamsModel: Encodable, ResponseModel: Codable>(with params: ParamsModel, completion: @escaping (Result<ResponseModel, Error>) -> Void)
 	
 	func cancel()
