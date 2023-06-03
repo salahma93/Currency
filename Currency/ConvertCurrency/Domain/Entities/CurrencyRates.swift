@@ -24,6 +24,11 @@ struct CurrencyRates {
 		self.rates = response.rates
 	}
 	
+	init(base: String, rates: [String: Double]) {
+		self.base = base
+		self.rates = rates
+	}
+	
 	func rate(for symbol: String) throws -> Double {
 		if let rate = rates[symbol] {
 			return rate
