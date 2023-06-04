@@ -8,13 +8,13 @@
 import Foundation
 import RxSwift
 
-class ConvertCurrencyViewModel: ConvertCurrencyViewModelProtocol {
+class ConvertCurrencyViewModel: ConvertCurrencyViewModelProtocol {	
 	//MARK: - Variables
 	private let availableCurrenciesUseCase: AvailableCurrenciesUseCaseProtocol
 	private let currencyConversionUseCase: ConvertCurrencyUseCaseProtocol
 		
 	var symbols: PublishSubject<[String]> = PublishSubject()
-	var convertedAmount: PublishSubject<Double> = PublishSubject()
+	var convertedAmount: PublishSubject<String> = PublishSubject()
 	
 	//MARK: - init(s)
 	init(availableCurrenciesUseCase: AvailableCurrenciesUseCaseProtocol,
@@ -34,9 +34,14 @@ class ConvertCurrencyViewModel: ConvertCurrencyViewModelProtocol {
 		}
 	}
 	
-	func convert(from: String, to: String, amount: String) {
+	func convert(from: String?, to: String?, amount: String?) {
+		guard let from = from, let to = to, let amount = amount else {
+			convertedAmount.onError(CurrencyConversionError.missingInfo)
+			return
+		}
+		
 		guard let doubleAmount = Double(amount) else {
-			convertedAmount.onError(CurrencyRateError.notAvailable)
+			convertedAmount.onError(CurrencyConversionError.wrongAmount)
 			return
 		}
 		
@@ -45,7 +50,7 @@ class ConvertCurrencyViewModel: ConvertCurrencyViewModelProtocol {
 		currencyConversionUseCase.convertCurrency(with: convertModel) { result in
 			switch result {
 			case .success(let convertedAmount):
-				self.convertedAmount.onNext(convertedAmount)
+				self.convertedAmount.onNext(String(convertedAmount))
 				
 			case .failure(let error):
 				self.convertedAmount.onError(error)

@@ -18,3 +18,8 @@ extension CurrencyConversionModel {
 		[from, to]
 	}
 }
+
+enum CurrencyConversionError: Error {
+	case missingInfo
+	case wrongAmount
+}
