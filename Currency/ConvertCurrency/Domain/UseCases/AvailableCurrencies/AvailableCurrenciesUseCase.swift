@@ -18,7 +18,7 @@ class AvailableCurrenciesUseCase: AvailableCurrenciesUseCaseProtocol {
 		currencyRepository.getLatestRates(for: []) { result in
 			switch result {
 			case .success(var currencyRates):
-				completion(.success(currencyRates.symbols))
+				completion(.success(currencyRates.symbols.sorted()))
 				
 			case .failure(let error):
 				completion(.failure(error))
