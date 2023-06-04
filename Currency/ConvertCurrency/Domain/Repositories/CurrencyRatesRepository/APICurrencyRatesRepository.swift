@@ -21,6 +21,11 @@ class APICurrencyRatesRepository: CurrencyRatesRepository, URLManaging {
 	
 	//MARK: - CurrencyRatesRepository
 	func getLatestRates(for symbols: [String], completion: @escaping RatesCompletion) {
+		cancelRunningTask()
+		requestLatestRates(for: symbols, completion: completion)
+	}
+	
+	private func requestLatestRates(for symbols: [String], completion: @escaping RatesCompletion) {
 		guard let url = getURL(for: serviceURLKey) else {
 			return
 		}
@@ -50,5 +55,9 @@ class APICurrencyRatesRepository: CurrencyRatesRepository, URLManaging {
 		}
 		
 		return paramsDictionary
+	}
+	
+	private func cancelRunningTask() {
+		networkManager.cancel()
 	}
 }
