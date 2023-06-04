@@ -62,6 +62,7 @@ final class ConvertCurrencyViewController: UIViewController {
 			}.disposed(by: disposeBag)
 		
 		viewModel.symbols
+			.subscribe(on: MainScheduler.instance)
 			.bind(to: toPickerView.rx.itemTitles) { _, item in
 				return "\(item)"
 			}.disposed(by: disposeBag)
@@ -82,6 +83,7 @@ final class ConvertCurrencyViewController: UIViewController {
 			}.disposed(by: disposeBag)
 		
 		viewModel.symbols
+			.subscribe(on: MainScheduler.instance)
 			.bind(to: fromPickerView.rx.itemTitles) { _, item in
 				return "\(item)"
 			}.disposed(by: disposeBag)
@@ -112,6 +114,7 @@ final class ConvertCurrencyViewController: UIViewController {
 			}).disposed(by: disposeBag)
 		
 		viewModel.convertedAmount
+			.subscribe(on: MainScheduler.instance)
 			.bind(to: convertedAmountLabel.rx.text)
 			.disposed(by: disposeBag)
 	}

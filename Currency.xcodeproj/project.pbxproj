@@ -39,6 +39,7 @@
 		AB07F7452A2BCF7400A3F02D /* CurrencyConversionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB07F7442A2BCF7400A3F02D /* CurrencyConversionModel.swift */; };
 		AB07F7492A2BD27000A3F02D /* CurrencyConversionUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB07F7482A2BD27000A3F02D /* CurrencyConversionUseCaseTests.swift */; };
 		AB07F74C2A2BDD9E00A3F02D /* AvailableCurrenciesUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB07F74B2A2BDD9E00A3F02D /* AvailableCurrenciesUseCaseTests.swift */; };
+		AB07F74F2A2CC69C00A3F02D /* ThreadSafeNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB07F74E2A2CC69B00A3F02D /* ThreadSafeNetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		AB07F7442A2BCF7400A3F02D /* CurrencyConversionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConversionModel.swift; sourceTree = "<group>"; };
 		AB07F7482A2BD27000A3F02D /* CurrencyConversionUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConversionUseCaseTests.swift; sourceTree = "<group>"; };
 		AB07F74B2A2BDD9E00A3F02D /* AvailableCurrenciesUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableCurrenciesUseCaseTests.swift; sourceTree = "<group>"; };
+		AB07F74E2A2CC69B00A3F02D /* ThreadSafeNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadSafeNetworkManager.swift; sourceTree = "<group>"; };
 		AF86041792956F62DADC8E4F /* Pods-Currency.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Currency.debug.xcconfig"; path = "Target Support Files/Pods-Currency/Pods-Currency.debug.xcconfig"; sourceTree = "<group>"; };
 		DF0A23809187BE12DD9127FA /* Pods-Currency.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Currency.release.xcconfig"; path = "Target Support Files/Pods-Currency/Pods-Currency.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -174,6 +176,7 @@
 			children = (
 				AB07F6F52A2A277800A3F02D /* NetworkManagerProtocol.swift */,
 				AB07F6F72A2A279300A3F02D /* NetworkManager.swift */,
+				AB07F74E2A2CC69B00A3F02D /* ThreadSafeNetworkManager.swift */,
 				AB07F73D2A2B8F8700A3F02D /* Mocking */,
 				AB07F6F92A2A2A2400A3F02D /* Service */,
 				AB07F72D2A2B79F700A3F02D /* URL Manager */,
@@ -549,6 +552,7 @@
 				AB07F6F62A2A277800A3F02D /* NetworkManagerProtocol.swift in Sources */,
 				AB07F71E2A2A3BC400A3F02D /* APICurrencyRatesRepository.swift in Sources */,
 				AB07F6C12A2A22C200A3F02D /* AppDelegate.swift in Sources */,
+				AB07F74F2A2CC69C00A3F02D /* ThreadSafeNetworkManager.swift in Sources */,
 				AB07F7162A2A39B900A3F02D /* AvailableCurrenciesUseCase.swift in Sources */,
 				AB07F6FB2A2A2A3200A3F02D /* NetworkServiceProtocol.swift in Sources */,
 				AB07F72F2A2B7A0C00A3F02D /* URLManager.swift in Sources */,
