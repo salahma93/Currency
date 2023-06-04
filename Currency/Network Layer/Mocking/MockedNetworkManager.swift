@@ -18,8 +18,13 @@ import Foundation
  */
 
 struct MockedNetworkManager: NetworkManagerProtocol {
+	private var failureError: Error?
 	
 	func load<T>(request: URLRequest, completion: @escaping (Result<T, Error>) -> Void) where T : Decodable, T : Encodable {
+		if let error = failureError {
+			completion(.failure(error))
+			return
+		}
 		
 		do {
 			let json = try getJSON()
@@ -33,6 +38,10 @@ struct MockedNetworkManager: NetworkManagerProtocol {
 			completion(.failure(NetworkError.invalidResponse))
 		}
 		
+	}
+	
+	mutating func setFailure(error: Error?) {
+		failureError = error
 	}
 	
 	func cancel() {

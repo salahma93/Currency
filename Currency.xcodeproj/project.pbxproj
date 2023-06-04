@@ -13,7 +13,6 @@
 		AB07F6CB2A2A22C200A3F02D /* Currency.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AB07F6C92A2A22C200A3F02D /* Currency.xcdatamodeld */; };
 		AB07F6CD2A2A22C300A3F02D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB07F6CC2A2A22C300A3F02D /* Assets.xcassets */; };
 		AB07F6D02A2A22C300A3F02D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB07F6CE2A2A22C300A3F02D /* LaunchScreen.storyboard */; };
-		AB07F6DB2A2A22C400A3F02D /* CurrencyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB07F6DA2A2A22C400A3F02D /* CurrencyTests.swift */; };
 		AB07F6F62A2A277800A3F02D /* NetworkManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB07F6F52A2A277800A3F02D /* NetworkManagerProtocol.swift */; };
 		AB07F6F82A2A279300A3F02D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB07F6F72A2A279300A3F02D /* NetworkManager.swift */; };
 		AB07F6FB2A2A2A3200A3F02D /* NetworkServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB07F6FA2A2A2A3200A3F02D /* NetworkServiceProtocol.swift */; };
@@ -40,6 +39,7 @@
 		AB07F7492A2BD27000A3F02D /* CurrencyConversionUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB07F7482A2BD27000A3F02D /* CurrencyConversionUseCaseTests.swift */; };
 		AB07F74C2A2BDD9E00A3F02D /* AvailableCurrenciesUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB07F74B2A2BDD9E00A3F02D /* AvailableCurrenciesUseCaseTests.swift */; };
 		AB07F74F2A2CC69C00A3F02D /* ThreadSafeNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB07F74E2A2CC69B00A3F02D /* ThreadSafeNetworkManager.swift */; };
+		AB07F7562A2CFBD300A3F02D /* APICurrencyRatesRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB07F7552A2CFBD300A3F02D /* APICurrencyRatesRepositoryTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +64,6 @@
 		AB07F6CF2A2A22C300A3F02D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB07F6D12A2A22C300A3F02D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB07F6D62A2A22C400A3F02D /* CurrencyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CurrencyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AB07F6DA2A2A22C400A3F02D /* CurrencyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTests.swift; sourceTree = "<group>"; };
 		AB07F6F52A2A277800A3F02D /* NetworkManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerProtocol.swift; sourceTree = "<group>"; };
 		AB07F6F72A2A279300A3F02D /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		AB07F6FA2A2A2A3200A3F02D /* NetworkServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceProtocol.swift; sourceTree = "<group>"; };
@@ -91,6 +90,7 @@
 		AB07F7482A2BD27000A3F02D /* CurrencyConversionUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConversionUseCaseTests.swift; sourceTree = "<group>"; };
 		AB07F74B2A2BDD9E00A3F02D /* AvailableCurrenciesUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableCurrenciesUseCaseTests.swift; sourceTree = "<group>"; };
 		AB07F74E2A2CC69B00A3F02D /* ThreadSafeNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadSafeNetworkManager.swift; sourceTree = "<group>"; };
+		AB07F7552A2CFBD300A3F02D /* APICurrencyRatesRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICurrencyRatesRepositoryTests.swift; sourceTree = "<group>"; };
 		AF86041792956F62DADC8E4F /* Pods-Currency.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Currency.debug.xcconfig"; path = "Target Support Files/Pods-Currency/Pods-Currency.debug.xcconfig"; sourceTree = "<group>"; };
 		DF0A23809187BE12DD9127FA /* Pods-Currency.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Currency.release.xcconfig"; path = "Target Support Files/Pods-Currency/Pods-Currency.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -166,7 +166,6 @@
 			children = (
 				AB07F7462A2BD25300A3F02D /* ConvertCurrency */,
 				AB07F7242A2B73BA00A3F02D /* Network Layer */,
-				AB07F6DA2A2A22C400A3F02D /* CurrencyTests.swift */,
 			);
 			path = CurrencyTests;
 			sourceTree = "<group>";
@@ -330,6 +329,7 @@
 		AB07F7462A2BD25300A3F02D /* ConvertCurrency */ = {
 			isa = PBXGroup;
 			children = (
+				AB07F7542A2CFBBA00A3F02D /* Repositories */,
 				AB07F7472A2BD25E00A3F02D /* UseCases */,
 			);
 			path = ConvertCurrency;
@@ -358,6 +358,14 @@
 				AB07F7482A2BD27000A3F02D /* CurrencyConversionUseCaseTests.swift */,
 			);
 			path = ConvertCurrency;
+			sourceTree = "<group>";
+		};
+		AB07F7542A2CFBBA00A3F02D /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				AB07F7552A2CFBD300A3F02D /* APICurrencyRatesRepositoryTests.swift */,
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 		CF95179EC0B437F692C488E2 /* Frameworks */ = {
@@ -570,8 +578,8 @@
 			files = (
 				AB07F74C2A2BDD9E00A3F02D /* AvailableCurrenciesUseCaseTests.swift in Sources */,
 				AB07F7492A2BD27000A3F02D /* CurrencyConversionUseCaseTests.swift in Sources */,
-				AB07F6DB2A2A22C400A3F02D /* CurrencyTests.swift in Sources */,
 				AB07F7272A2B73DB00A3F02D /* GETRequestMethodTests.swift in Sources */,
+				AB07F7562A2CFBD300A3F02D /* APICurrencyRatesRepositoryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

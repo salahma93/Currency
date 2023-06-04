@@ -28,7 +28,7 @@ final class AvailableCurrenciesUseCaseTests: XCTestCase {
 	}
 	
 	func testGetCurrencySymbols_Success() {
-		let currencySymbols = ["USD", "EUR", "GBP"]
+		let currencySortedSymbols = ["EUR", "GBP", "USD"]
 		let currencyRates = CurrencyRates(base: "USD", rates: ["USD": 39.0, "EUR": 30.0, "GBP": 2.2])
 		currencyRepositoryMock.latestRatesResult = .success(currencyRates)
 		
@@ -37,7 +37,7 @@ final class AvailableCurrenciesUseCaseTests: XCTestCase {
 		useCase.getCurrencySymbols { result in
 			switch result {
 			case .success(let symbols):
-				XCTAssertEqual(symbols, currencySymbols)
+				XCTAssertEqual(symbols, currencySortedSymbols)
 				expectation.fulfill()
 				
 			case .failure(let error):

@@ -27,6 +27,7 @@ class APICurrencyRatesRepository: CurrencyRatesRepository, URLManaging {
 	
 	private func requestLatestRates(for symbols: [String], completion: @escaping RatesCompletion) {
 		guard let url = getURL(for: serviceURLKey) else {
+			completion(.failure(NetworkError.urlNotExist))
 			return
 		}
 		
