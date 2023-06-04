@@ -15,6 +15,7 @@ final class ConvertCurrencyViewController: UIViewController {
 	@IBOutlet private weak var fromTextField: UITextField!
 	@IBOutlet private weak var toTextField: UITextField!
 	
+	@IBOutlet private weak var errorTextLabel: UILabel!
 	@IBOutlet private weak var convertedAmountLabel: UILabel!
 	@IBOutlet private weak var toButton: UIButton!
 	@IBOutlet private weak var fromButton: UIButton!
@@ -47,6 +48,7 @@ final class ConvertCurrencyViewController: UIViewController {
 		setupConvertToCurrencyBindings()
 		setupConvertFromCurrencyBindings()
 		setupConversionBindings()
+		setupErrorBindings()
 		
 		viewModel.start()
 	}
@@ -111,6 +113,13 @@ final class ConvertCurrencyViewController: UIViewController {
 		
 		viewModel.convertedAmount
 			.bind(to: convertedAmountLabel.rx.text)
+			.disposed(by: disposeBag)
+	}
+	
+	private func setupErrorBindings() {
+		viewModel.errorsSubject
+			.map { $0?.localizedDescription }
+			.bind(to: errorTextLabel.rx.text)
 			.disposed(by: disposeBag)
 	}
 }

@@ -49,3 +49,9 @@ struct CurrencyRates {
 enum CurrencyRateError: Error {
 	case notAvailable
 }
+
+extension CurrencyRateError: LocalizedError {
+	var errorDescription: String? {
+		return "Currency Rates not available right now"
+	}
+}

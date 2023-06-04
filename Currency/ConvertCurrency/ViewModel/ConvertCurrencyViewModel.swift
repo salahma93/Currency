@@ -15,6 +15,7 @@ class ConvertCurrencyViewModel: ConvertCurrencyViewModelProtocol {
 		
 	var symbols: PublishSubject<[String]> = PublishSubject()
 	var convertedAmount: PublishSubject<String> = PublishSubject()
+	var errorsSubject: PublishSubject<Error?> = PublishSubject()
 	
 	//MARK: - init(s)
 	init(availableCurrenciesUseCase: AvailableCurrenciesUseCaseProtocol,
@@ -24,36 +25,39 @@ class ConvertCurrencyViewModel: ConvertCurrencyViewModelProtocol {
 	}
 	
 	func start() {
-		availableCurrenciesUseCase.getCurrencySymbols { result in
+		availableCurrenciesUseCase.getCurrencySymbols { [weak self] result in
 			switch result {
 			case .success(let symbols):
-				self.symbols.onNext(symbols)
+				self?.errorsSubject.onNext(nil)
+				self?.symbols.onNext(symbols)
+				
 			case .failure(let error):
-				self.symbols.onError(error)
+				self?.errorsSubject.onNext(error)
 			}
 		}
 	}
 	
 	func convert(from: String?, to: String?, amount: String?) {
 		guard let from = from, let to = to, let amount = amount else {
-			convertedAmount.onError(CurrencyConversionError.missingInfo)
+			errorsSubject.onNext(CurrencyConversionError.missingInfo)
 			return
 		}
 		
 		guard let doubleAmount = Double(amount) else {
-			convertedAmount.onError(CurrencyConversionError.wrongAmount)
+			errorsSubject.onNext(CurrencyConversionError.wrongAmount)
 			return
 		}
 		
 		let convertModel = CurrencyConversionModel(from: from, to: to, amount: doubleAmount)
 		
-		currencyConversionUseCase.convertCurrency(with: convertModel) { result in
+		currencyConversionUseCase.convertCurrency(with: convertModel) { [weak self] result in
 			switch result {
 			case .success(let convertedAmount):
-				self.convertedAmount.onNext(String(convertedAmount))
+				self?.errorsSubject.onNext(nil)
+				self?.convertedAmount.onNext(String(convertedAmount))
 				
 			case .failure(let error):
-				self.convertedAmount.onError(error)
+				self?.errorsSubject.onNext(error)
 			}
 		}
 	}

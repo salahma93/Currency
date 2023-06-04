@@ -12,6 +12,7 @@
             <connections>
                 <outlet property="amountTextField" destination="6Ty-pL-hJ5" id="bUx-Sb-qw3"/>
                 <outlet property="convertedAmountLabel" destination="wmN-8g-T1F" id="cpT-28-T6a"/>
+                <outlet property="errorTextLabel" destination="Fjj-yx-ahz" id="eM4-LQ-8XV"/>
                 <outlet property="fromButton" destination="wWp-du-eLJ" id="ju8-8N-AZ4"/>
                 <outlet property="fromTextField" destination="JX2-8a-HHw" id="pem-3e-3fy"/>
                 <outlet property="toButton" destination="Qus-sB-fwx" id="rAM-oK-rQ0"/>
@@ -25,7 +26,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="19H-GI-WeZ">
-                    <rect key="frame" x="39.333333333333343" y="342.66666666666669" width="314.33333333333326" height="166.66666666666669"/>
+                    <rect key="frame" x="39.333333333333343" y="329.66666666666669" width="314.33333333333326" height="192.66666666666669"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="QGX-XO-T0C">
                             <rect key="frame" x="0.0" y="0.0" width="314.33333333333331" height="34.333333333333336"/>
@@ -116,8 +117,17 @@
                                 <constraint firstItem="Y5i-e2-74t" firstAttribute="height" secondItem="JX2-8a-HHw" secondAttribute="height" id="tgN-7H-5db"/>
                             </constraints>
                         </stackView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fjj-yx-ahz">
+                            <rect key="frame" x="0.0" y="86.333333333333314" width="314.33333333333326" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="x30-qd-X4d"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" systemColor="systemRedColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="CI2-OJ-Y0H">
-                            <rect key="frame" x="0.0" y="86.333333333333314" width="314.33333333333331" height="40"/>
+                            <rect key="frame" x="0.0" y="112.33333333333331" width="314.33333333333331" height="40"/>
                             <subviews>
                                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="line" placeholder="0.0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Ty-pL-hJ5">
                                     <rect key="frame" x="0.0" y="0.0" width="104.66666666666667" height="40"/>
@@ -141,7 +151,7 @@
                             </constraints>
                         </stackView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j1p-xD-aVc">
-                            <rect key="frame" x="0.0" y="132.33333333333331" width="314.33333333333331" height="34.333333333333343"/>
+                            <rect key="frame" x="0.0" y="158.33333333333331" width="314.33333333333331" height="34.333333333333343"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title="Details" cornerStyle="medium">
                                 <backgroundConfiguration key="background">
@@ -158,7 +168,7 @@
                     </constraints>
                 </stackView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currency Converter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="xyK-n5-AKJ">
-                    <rect key="frame" x="16" y="259.66666666666669" width="361" height="33"/>
+                    <rect key="frame" x="16" y="246.66666666666663" width="361" height="33"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="33" id="5uM-0W-7xW"/>
                     </constraints>
@@ -188,6 +198,9 @@
         </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tintColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

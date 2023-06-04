@@ -11,6 +11,7 @@ import RxSwift
 protocol ConvertCurrencyViewModelProtocol {
 	var symbols: PublishSubject<[String]> { get }
 	var convertedAmount: PublishSubject<String> { get }
+	var errorsSubject: PublishSubject<Error?> { get }
 	
 	func start()
 	func convert(from: String?, to: String?, amount: String?)

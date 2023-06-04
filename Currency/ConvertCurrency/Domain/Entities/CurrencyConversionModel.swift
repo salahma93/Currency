@@ -19,7 +19,20 @@ extension CurrencyConversionModel {
 	}
 }
 
+//MARK: - Currency Conversion Errors
 enum CurrencyConversionError: Error {
 	case missingInfo
 	case wrongAmount
+}
+
+extension CurrencyConversionError: LocalizedError {
+	var errorDescription: String? {
+		switch self {
+		case .missingInfo:
+			return "There is a Missing Info"
+			
+		case .wrongAmount:
+			return "The Entered Amount is wrong"
+		}
+	}
 }
