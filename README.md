@@ -1,6 +1,6 @@
 # Currency
 
-Currency is a Swift App that provides functionality for currency conversion and fetching currency rates using an API. Currency App Arct
+Currency is a Swift App that provides functionality for currency conversion and fetching currency rates using an API. It follows the principles of Clean Architecture and utilizes the MVVM (Model-View-ViewModel) architectural pattern. The app is built using Swift programming language and leverages the power of RxSwift for reactive programming.
 
 ## Features
 
